@@ -14,7 +14,7 @@ The terminal version of the Mad Libs Game. Mad Libs is a phrasal template word g
 4. Input the words following the prompt (21 words)
 5. Receive your output
 6. Check you current result in the madlib_result.txt file
-
+7. To run test use "pytest -s" command
 
 ## Architecture
 * Python 3.7.5
@@ -26,7 +26,7 @@ The terminal version of the Mad Libs Game. Mad Libs is a phrasal template word g
 *                   |
 *          _____handle_IO()_____
 *         |                     |
-*   print_prompts()   |     empty_template()
+*   print_prompts()     |     empty_template()
 *       |
 *   prompt_list()
 *       |

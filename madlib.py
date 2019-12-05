@@ -5,7 +5,7 @@ def read_file(file):
     """F() to take data from template_madlib file"""
     with open(file, 'r') as f:
         template = (f.read())
-        return(template)
+        return template
 
 # call read_file() to read the template_madlib file
 template_file = read_file('template_madlib.txt')
@@ -25,7 +25,7 @@ def empty_template(pattern, template):
 def print_prompts():
     """Print prompts to user and return array of users inputs"""
     user_words = []
-    for el in prompts_list("\{[a-zA-Z0-9' -]*\}", template_file):
+    for el in prompts_list("\{[a-zA-Z0-9\' -]*\}", template_file):
         user_word = input(f'Give me {el[1:-1]}: -----> ')
         user_words.append(user_word)
     return user_words
@@ -41,7 +41,7 @@ def handle_IO():
         user_words = print_prompts()
 
         # store the empty template in new var
-        template = empty_template("\{[a-zA-Z0-9' -]*\}", template_file)
+        template = empty_template("\{[a-zA-Z0-9\' -]*\}", template_file)
 
         # return template formated with users inputs
         formatted_template = f'\nHere is your story:\n-------------------\n{template.format(*user_words)[22:]}'
