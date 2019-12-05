@@ -22,15 +22,15 @@ The terminal version of the Mad Libs Game. Mad Libs is a phrasal template word g
 * Regex module for Python
 * Pytest
 
-*        write_file()
-*              |
-*          handle_IO()
-*          |        |
-* print_prompts(),  empty_template()
-*      |
-* prompt_list()
-*      |
-* read_file()
+*             write_file()
+*                   |
+*          _____handle_IO()_____
+*         |                     |
+*   print_prompts()        empty_template()
+*       |
+*  prompt_list()
+*       |
+*  read_file()
 
 
 ## API
